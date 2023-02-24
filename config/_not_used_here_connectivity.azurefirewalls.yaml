@@ -1,0 +1,44 @@
+
+#// EXAMPLE ONLY - ASSUMES THIS IS MANAGED IN CODE, BUT DEMO USES EXISTING (deployed) AZFW instance
+- name: "azfw-connectvitiy-ae"
+  resource_name: "azfw-connectvitiy-ae"
+  location: "australiaeast"
+  resource_group_name: "rg-connectivity-sharedservices-ae" # Must be same Resource Group as per AzureFirewallSubnet VNET
+  sku_name: "AZFW_Hub"
+  sku_tier: "Premium"
+  firewall_policy_name: "fwpol-childpolicy-ae" # maps to firewall_policy_id - NOTE: omitting this will create the firewall instance in legacy policy mode (vs. Decoupled policy/Firewall Manager). Cannot be subsequently changed. Create policy first before firewall.
+  #threat_intel_mode: "Off"
+  zones: "1,2,3"
+  dns_servers:
+  provider: shared-svc-prod
+  ip_configurations:
+    - name: "azfw-ip-config-main-prod"
+      subnet_name: "AzureFirewallSubnet-vnet-sharedservices-hub-ae-prod" # Maps to subnet_id which is the target AzureFirewallSubnet instance (must exist)
+      #subnet_resource_name: "AzureFirewallSubnet"
+      public_ip_address_name: "pip-azfw-ae-prod-1" # maps to public_ip_address_id
+      #public_ip_address_resource_name: "pip-azfw-ae-1"
+    - name: "azfw-ip-config-dnat-prod-1"
+      public_ip_address_name: "pip-azfw-ae-prod-2" # maps to public_ip_address_id
+      #public_ip_address_resource_name: "pip-azfw-ae-prod-2"
+    - name: "azfw-ip-config-dnat-DemoApp01-qa-1"
+      public_ip_address_name: "pip-DemoApp01-qa-sharedservices-ae-prod" # maps to public_ip_address_id
+    - name: "azfw-ip-config-dnat-DemoApp01-prod-1"
+      public_ip_address_name: "pip-DemoApp01-prod-sharedservices-ae-prod" # maps to public_ip_address_id
+    - name: "azfw-ip-config-dnat-istio-preprod-1"
+      public_ip_address_name: "pip-istio-preprod-sharedservices-ae-prod" # maps to public_ip_address_id
+    - name: "azfw-ip-config-dnat-istio-prod-1"
+      public_ip_address_name: "pip-istio-prod-sharedservices-ae-prod" # maps to public_ip_address_id
+  management_ip_configurations:
+    - name: "force-tunnelling-prod"
+      public_ip_address_name: "pip-mgtm-prod" # Maps to public_ip_address_id
+      public_ip_address_resource_name: "pip-mgtm-prod"
+      subnet_name: "snet-fwmgmt-prod"
+      subnet_resource_name: "snet-fwmgmt-prod"
+  virtual_hubs:
+    - virtual_hub_name: "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/eslz-tf-connectivity/providers/Microsoft.Network/virtualHubs/eslz-tf-hub-australiaeast"
+      public_ip_count: 2
+  tags:
+    3cost_center: "1234"
+    environment: "prod"
+    security_dimension: "internally-controlled"
+

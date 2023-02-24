@@ -1,0 +1,27 @@
+- name: "ipgroup-onprem-nat"
+  resource_name: "ipgroup-onprem-nat"
+  location: "australiaeast"
+  resource_group_name: "rg-networkprotection-ae"
+  cidrs: ["125.236.218.41/32"]
+  tags:
+    cost_center: "1234"
+    environment: "prod"
+    arc_rating: "tier0"
+- name: "ipgroup-onprem"
+  resource_name: "ipgroup-onprem"
+  location: "australiaeast"
+  resource_group_name: "rg-networkprotection-ae"
+  cidrs: ["192.168.0.0/16"]
+  tags:
+    cost_center: "1234"
+    environment: "prod"
+    arc_rating: "tier0"
+- name: "ipgroup-spokes"
+  resource_name: "ipgroup-spokes"
+  location: "australiaeast"
+  resource_group_name: "rg-networkprotection-ae"
+  cidrs: ["10.101.0.0/16","10.102.0.0/16","10.201.0.0/16","10.1.0.0/16"]
+  tags:
+    cost_center: "1234"
+    environment: "prod"
+    arc_rating: "tier0"

@@ -1,0 +1,6 @@
+- name: "rg-networkprotection-ae"
+  resource_name: "rg-networkprotection-ae"  
+  subscription_id: "8fa5f8a1-xxxxxxxxxxxxxxxxxxxxxxxxxxx"
+  location: "australiaeast"
+  tags: 
+    billing_code: "demo"
