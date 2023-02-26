@@ -15,7 +15,7 @@ resource "azurerm_vpn_gateway_connection" "this" {
   # location: "australiaeast"
   # resource_group_name: "rg-vnet-sharedservices-hub-prod"
   # #vpn_gateway_name: "vpngw-vwan-hub-sharedservices-ae-prod" #maps to vpn gateway id
-  # vpn_gateway_name: "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/contoso-connectivity/providers/Microsoft.Network/vpnGateways/contoso-vpngw-australiaeast" # sub-in Id here until eslz module outputs the vWan Id and can be referenced by name
+  # vpn_gateway_name: "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/contoso-connectivity/providers/Microsoft.Network/vpnGateways/contoso-vpngw-australiaeast" # sub-in Id here until eslz module outputs the vWan Id and can be referenced by name
   # remote_vpn_site_name: "vpnsite-home-ae" #maps to vpn site id
   # vpn_link_name: "vpnhome01" #maps to vpn site link id
   # vpn_link_bgp_enabled: "true"
@@ -24,9 +24,9 @@ resource "azurerm_vpn_gateway_connection" "this" {
   # vpn_site_link_name: "vpnhome01"
   # routing: #blocks
   # - name: ""
-  #   associated_route_table: "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/contoso-connectivity/providers/Microsoft.Network/virtualHubs/contoso-hub-australiaeast/hubRouteTables/defaultRouteTable"
+  #   associated_route_table: "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/contoso-connectivity/providers/Microsoft.Network/virtualHubs/contoso-hub-australiaeast/hubRouteTables/defaultRouteTable"
   #   propagated_route_table: #block
-  #   - route_table_ids: ["/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/contoso-connectivity/providers/Microsoft.Network/virtualHubs/contoso-hub-australiaeast/hubRouteTables/noneRouteTable"]
+  #   - route_table_ids: ["/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/contoso-connectivity/providers/Microsoft.Network/virtualHubs/contoso-hub-australiaeast/hubRouteTables/noneRouteTable"]
   #     labels: []
 
   dynamic "routing" {

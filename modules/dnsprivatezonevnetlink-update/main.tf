@@ -11,9 +11,9 @@
 
 # dnsvnetlinks = {
 #   "connectivity" = {
-#     "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/29c7e3d4-e589-4555-a1d8-ac60fcc05a2c-0bcb75ea-e2f0-5abf-9090-72f76913bbb5" = {
-#       "id" = "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/29c7e3d4-e589-4555-a1d8-ac60fcc05a2c-0bcb75ea-e2f0-5abf-9090-72f76913bbb5"
-#       "name" = "29c7e3d4-e589-4555-a1d8-ac60fcc05a2c-0bcb75ea-e2f0-5abf-9090-72f76913bbb5"
+#     "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/29c7e3d4-e589-4555-a1d8-ac60fcc05a2c-0bcb75ea-e2f0-5abf-9090-72f76913bbb5" = {
+#       "id" = "/subscriptions/35bc9ee5xxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/29c7e3d4-e589-4555-a1d8-ac60fcc05a2c-0bcb75ea-e2f0-5abf-9090-72f76913bbb5"
+#       "name" = "29c7e3d4-e589-4555-a1d8-ac60fcc05a2c-0bcb75ea-xxxxxxxxxxxxxxxxxxxx"
 #       "private_dns_zone_name" = "app1.corp.local"
 #       "registration_enabled" = false
 #       "resource_group_name" = "eslz-tf-dns"
@@ -21,11 +21,11 @@
 #         "deployedBy" = "terraform/azure/caf-enterprise-scale/v2.0.0"
 #       })
 #       "timeouts" = null /* object */
-#       "virtual_network_id" = "/subscriptions/29c7e3d4-e589-4555-a1d8-ac60fcc05a2c/resourceGroups/rg-vpnhome/providers/Microsoft.Network/virtualNetworks/vnet-onprem"
+#       "virtual_network_id" = "/subscriptions/29c7e3d4-xxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/rg-vpnhome/providers/Microsoft.Network/virtualNetworks/vnet-onprem"
 #     }
-#     "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/35bc9ee5-7aba-4723-9eac-01b8294344f7-93395dc1-3d9c-5de1-9185-fb6312c728c0" = {
-#       "id" = "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/35bc9ee5-7aba-4723-9eac-01b8294344f7-93395dc1-3d9c-5de1-9185-fb6312c728c0"
-#       "name" = "35bc9ee5-7aba-4723-9eac-01b8294344f7-93395dc1-3d9c-5de1-9185-fb6312c728c0"
+#     "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/35bc9ee5-7aba-4723-9eac-01b8294344f7-93395dc1-3d9c-5de1-9185-fb6312c728c0" = {
+#       "id" = "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxx/resourceGroups/eslz-tf-dns/providers/Microsoft.Network/privateDnsZones/app1.corp.local/virtualNetworkLinks/35bc9ee5-7aba-4723-9eac-01b8294344f7-93395dc1-3d9c-5de1-9185-fb6312c728c0"
+#       "name" = "35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxxxxxxx5de1-9185-fb6312c728c0"
 #       "private_dns_zone_name" = "app1.corp.local"
 #       "registration_enabled" = false
 #       "resource_group_name" = "eslz-tf-dns"
@@ -33,7 +33,7 @@
 #         "deployedBy" = "terraform/azure/caf-enterprise-scale/v2.0.0"
 #       })
 #       "timeouts" = null /* object */
-#       "virtual_network_id" = "/subscriptions/35bc9ee5-7aba-4723-9eac-01b8294344f7/resourceGroups/rg-connectivity-sharedservices-ae/providers/Microsoft.Network/virtualNetworks/vnet-connectivity-sharedservices-ae"
+#       "virtual_network_id" = "/subscriptions/35bc9ee5-xxxxxxxxxxxxxxxxxxxxxxxxxxxx/resourceGroups/rg-connectivity-sharedservices-ae/providers/Microsoft.Network/virtualNetworks/vnet-connectivity-sharedservices-ae"
 #     }
 
 
@@ -114,7 +114,7 @@ resource "azapi_update_resource" "this" {
 #     email_address = "testterform@example.com"
 #     group_memberships = [ "test1" ]
 #     tags = { department : "test" }
-#     ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAA4l7"
+#     ssh_public_key = "ssh-rsaxxxxxxxxxxxxxxxxxxxxxxx"
 #   }
 
 #   "testterform2" = {
