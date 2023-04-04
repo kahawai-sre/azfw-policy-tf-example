@@ -1,5 +1,5 @@
 # azfw-policy-tf-example
-
+Example pattern for deployment and ongoing lifecycle management of Azure Firewall Policy and Rule Collecttion Groups, alongside immediate resource dependencies.
 1. /config/<resouce_type>.yaml - for all deployed Azure Resources, resource instances and per instance config are defined in YAML format 
 2. /custom.security.variables.tf - defines relative paths to the yaml file for each resource type
 3. /custom.security.settings.tf - yaml files for each resource type are read using yamldecode in terraform 'local' code. A map is generated for each resource type.
