@@ -15,7 +15,7 @@ NOTE: example assumes all dependent resources for Azure Firewall Policy are incl
 - Azure Firewall Policy Rule Collection Groups, with NAT, Network, and Application rules
 
 ## Intent:
-- Split "config" from code as an enabler for splitting repos/RBAC based on SoD model
+- Split "config" from code as an enabler for splitting into different repos, if desired e.g. to meet SoD and operational requirements
 - Make config more human readable using YAML. This lends itself to having operational teams - who may not be IaC experts - make pull requests for changes (arguably at least better than having to update native complex TF variables, or bicep/json)
 - "Enforce" use of terraform "maps" (key=>values) as inputs to modules, and for safe state file structure (e.g. avoiding "count")
 - Deployment can easily (flexibly) be split across multiple azure subscriptions using Providers. e.g. IP Groups and IP Prefixes could be deployed to 'connectivity' subscription archetype, while Firewall Policy resources are deployed to a 'network security' subscription archetype in the ESLZ. Config can likewise be split to different git repos with associated RBAC and Separation of Duties concerns covered.
